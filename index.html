@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emin Berber — Saç Kesimi & Randevu</title>
+  <meta name="description" content="Emin Berber. Temiz, sakin ve 3 adımlı kolay randevu sistemiyle çalışan yerel berber salonu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="barbershop.css">
+</head>
+<body>
+
+  <!-- 1. HEADER & NAVIGATION -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      
+      <!-- Business Name / Logo on Left -->
+      <a href="#hero" class="site-brand">
+        <span class="brand-symbol">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+            <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+            <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <span class="brand-main">Emin Berber</span>
+          <span class="brand-sub">Erkek Kuaförü</span>
+        </div>
+      </a>
+
+      <!-- Simple Nav Links -->
+      <nav class="nav-links" aria-label="Menü">
+        <a href="#hero" class="nav-item">Ana Sayfa</a>
+        <a href="#randevu-al" class="nav-item">Randevu</a>
+        <a href="#urunler" class="nav-item">Ürünler</a>
+        <a href="#iletisim" class="nav-item">Konum &amp; İletişim</a>
+      </nav>
+
+      <!-- Right: Book Appointment Button (Configured to open in NEW TAB _blank) -->
+      <div class="header-right">
+        <a 
+          href="randevu.html" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn btn-primary"
+          aria-label="Randevu Al (Yeni Sekmede Açılır)"
+        >
+          <span>Randevu Al</span>
+          <svg class="external-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Menüyü Göster/Gizle" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-nav" id="mobile-menu">
+      <a href="#hero" class="mobile-nav-link">Ana Sayfa</a>
+      <a href="#randevu-al" class="mobile-nav-link">Randevu Planla</a>
+      <a href="#urunler" class="mobile-nav-link">Ürünler</a>
+      <a href="#iletisim" class="mobile-nav-link">Konum &amp; İletişim</a>
+      <a 
+        href="randevu.html" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="btn btn-primary btn-block"
+      >
+        <span>Randevu Al (Yeni Sekme)</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION: IMAGE SLIDER SHOWING SHOP CUTS & INTERIOR FOR EMIN BERBER -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Headline area -->
+        <div class="hero-intro">
+          <span class="hero-tag">Emin Berber &bull; Randevulu Hizmet</span>
+          <h1 class="hero-title">Erkek Kuaförü &amp; Saç Kesimi</h1>
+          <p class="hero-desc">
+            Sıra beklemeden, vaktinizi kaybetmeden hizmet alabilmeniz için 3 adımlı kolay randevu akışımızı kullanabilirsiniz.
+          </p>
+          <div class="hero-actions">
+            <a href="#randevu-al" class="btn btn-primary btn-lg">
+              <span>Hemen Randevu Seç</span>
+              &darr;
+            </a>
+            <a 
+              href="randevu.html" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-secondary btn-lg"
+            >
+              <span>Yeni Sekmede Aç</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Clean Image Slider -->
+        <div class="slider-wrapper">
+          <div class="slider-viewport" id="slider-viewport">
+            
+            <!-- Slide 1: Shop Interior -->
+            <div class="slide active">
+              <img 
+                src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80" 
+                alt="Emin Berber salon içi düzeni" 
+                class="slide-image"
+              >
+              <div class="slide-caption">Salon İçi — Temiz ve sakin çalışma ortamımız</div>
+            </div>
+
+            <!-- Slide 2: Haircut & Styling -->
+            <div class="slide">
+              <img 
+                src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1200&q=80" 
+                alt="Saç kesimi uygulaması" 
+                class="slide-image"
+              >
+              <div class="slide-caption">Saç Kesimi — Makas ve makine modelleri</div>
+            </div>
+
+            <!-- Slide 3: Beard Grooming & Shave -->
+            <div class="slide">
+              <img 
+                src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=80" 
+                alt="Sakal tıraşı ve düzeltme" 
+                class="slide-image"
+              >
+              <div class="slide-caption">Sakal Tıraşı — Sıcak havlu ve ustura ile sakal bakımı</div>
+            </div>
+
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="slider-controls">
+            <button type="button" class="slider-btn" id="slider-prev" aria-label="Önceki Görsel">&larr;</button>
+            <div class="slider-indicators" id="slider-indicators">
+              <span class="indicator-dot active" data-index="0"></span>
+              <span class="indicator-dot" data-index="1"></span>
+              <span class="indicator-dot" data-index="2"></span>
+            </div>
+            <button type="button" class="slider-btn" id="slider-next" aria-label="Sonraki Görsel">&rarr;</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. INTERACTIVE 3-STEP APPOINTMENT BOOKING WIDGET -->
+    <section class="booking-section-wrapper" id="randevu-al">
+      <div class="container">
+        
+        <div class="section-header" style="text-align: center; margin: 0 auto 2.5rem;">
+          <h2 class="section-title">Online Randevu Al</h2>
+          <p class="section-subtitle">3 kolay adımda berberinizi, uygun gün ve 30 dakikalık saat diliminizi belirleyin</p>
+        </div>
+
+        <!-- The 3-Step Interactive Booking Selector Card -->
+        <div class="booking-widget-card" id="booking-selector-widget">
+          
+          <!-- Step Progress Indicators -->
+          <div class="flow-progress-bar" role="tablist" aria-label="Randevu Adımları">
+            <div class="flow-step-indicator active" data-step="1" role="tab" aria-selected="true">
+              <span class="step-circle">1</span>
+              <span class="step-label">Berber Seçimi</span>
+            </div>
+            <span class="step-arrow-divider">&rarr;</span>
+            <div class="flow-step-indicator" data-step="2" role="tab" aria-selected="false">
+              <span class="step-circle">2</span>
+              <span class="step-label">Tarih &amp; Saat</span>
+            </div>
+            <span class="step-arrow-divider">&rarr;</span>
+            <div class="flow-step-indicator" data-step="3" role="tab" aria-selected="false">
+              <span class="step-circle">3</span>
+              <span class="step-label">İletişim &amp; Onay</span>
+            </div>
+          </div>
+
+          <!-- Alert / Validation Notice Banner -->
+          <div class="flow-alert-box hidden" id="flow-alert" role="alert">
+            <div style="flex-grow: 1;">
+              <strong id="flow-alert-title" style="display: block; margin-bottom: 2px;">Uyarı</strong>
+              <span id="flow-alert-msg" style="font-size: 0.85rem;">Lütfen gerekli alanları doldurunuz.</span>
+            </div>
+            <button type="button" class="flow-alert-close" id="flow-alert-close" aria-label="Kapat">&times;</button>
+          </div>
+
+          <!-- ================= STEP 1: SELECT BARBER ================= -->
+          <div class="flow-step-panel active" data-step="1">
+            <div class="step-panel-header">
+              <h3 class="step-panel-title">1. Berberinizi Seçin</h3>
+              <p class="step-panel-subtitle">Hizmet almak istediğiniz ustayı veya ilk müsait seçeneği belirleyin</p>
+            </div>
+
+            <!-- Clickable Barber Avatar Cards -->
+            <div class="barber-cards-grid" id="barber-cards-container">
+              <!-- Dynamically populated by JS: Emin Usta, Ahmet Usta, Fark Etmez -->
+            </div>
+
+            <div class="flow-step-actions align-right">
+              <button type="button" class="btn btn-primary" id="step1-next-btn">
+                <span>Devam Et: Tarih &amp; Saat Seç</span>
+                &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- ================= STEP 2: SELECT DATE & TIME ================= -->
+          <div class="flow-step-panel" data-step="2">
+            <div class="step-panel-header">
+              <h3 class="step-panel-title">2. Tarih ve Saat Dilimi Seçin</h3>
+              <p class="step-panel-subtitle">
+                Seçilen Berber: <strong id="step2-summary-barber">Emin Usta</strong> &bull; 30 dakikalık uygun saat dilimini seçin
+              </p>
+            </div>
+
+            <!-- Day Picker Strip (Bugün, Yarın, vb.) -->
+            <div class="date-scroll-strip" id="date-pill-strip" role="radiogroup" aria-label="Gün Seçimi">
+              <!-- Populated by JS -->
+            </div>
+
+            <!-- Available 30-Minute Time Slots -->
+            <div class="slots-sub-header">
+              <span class="slots-sub-title">Uygun Saatler (30 Dakikalık Aralıklar)</span>
+              <span class="slots-badge-count" id="available-slots-count">-- müsait saat</span>
+            </div>
+
+            <div class="slots-grid-container" id="slot-grid">
+              <!-- Populated by JS with disabled/booked states -->
+            </div>
+
+            <div class="flow-step-actions">
+              <button type="button" class="btn btn-secondary" id="step2-back-btn">
+                &larr; <span>Geri (Berber Değiştir)</span>
+              </button>
+              <button type="button" class="btn btn-primary" id="step2-next-btn" disabled>
+                <span>Devam Et: İletişim Bilgileri</span>
+                &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- ================= STEP 3: CONTACT & CONFIRMATION ================= -->
+          <div class="flow-step-panel" data-step="3">
+            <div class="step-panel-header">
+              <h3 class="step-panel-title">3. İletişim Bilgileriniz</h3>
+              <p class="step-panel-subtitle">Randevunuzun doğrulanması ve kayıt onayı için gereklidir</p>
+            </div>
+
+            <!-- Selected Summary Box -->
+            <div class="selection-summary-card">
+              <div class="summary-item">
+                <span class="summary-item-label">Seçilen Berber:</span>
+                <span class="summary-item-value" id="step3-summary-barber">Emin Usta</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-item-label">Randevu Zamanı:</span>
+                <span class="summary-item-value" id="step3-summary-datetime">--</span>
+              </div>
+            </div>
+
+            <form id="flow-booking-form" novalidate>
+              <div class="form-fields-stack">
+                <!-- Full Name -->
+                <div class="form-field">
+                  <label for="flow-client-name" class="field-label">
+                    Adınız &amp; Soyadınız <span class="required-star">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="flow-client-name" 
+                    class="field-input" 
+                    placeholder="Örn: Mehmet Yılmaz" 
+                    autocomplete="name"
+                    required
+                  >
+                </div>
+
+                <!-- Phone (MANDATORY FIELD) -->
+                <div class="form-field">
+                  <label for="flow-client-phone" class="field-label">
+                    Telefon Numarası <span class="required-star">* (Zorunlu Alan)</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="flow-client-phone" 
+                    class="field-input" 
+                    placeholder="0 (5XX) XXX XX XX" 
+                    maxlength="17"
+                    autocomplete="tel"
+                    required
+                  >
+                  <span class="field-note">Aynı telefon numarası günde yalnızca 1 randevu oluşturabilir.</span>
+                </div>
+
+                <!-- Notes (Optional) -->
+                <div class="form-field">
+                  <label for="flow-client-notes" class="field-label">
+                    Randevu Notu (Opsiyonel)
+                  </label>
+                  <input 
+                    type="text" 
+                    id="flow-client-notes" 
+                    class="field-input" 
+                    placeholder="Örn: Saç kesimi ve sakal düzeltme"
+                  >
+                </div>
+              </div>
+
+              <div class="flow-step-actions">
+                <button type="button" class="btn btn-secondary" id="step3-back-btn">
+                  &larr; <span>Geri (Saat Değiştir)</span>
+                </button>
+                <button type="submit" class="btn btn-primary" id="confirm-booking-btn">
+                  <span>Randevuyu Onayla</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. PRODUCT SECTION (HAIR & BEARD CARE IN TL) -->
+    <section class="section-block bg-soft" id="urunler">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Bakım Ürünleri</h2>
+          <p class="section-subtitle">Emin Berber salonumuzda kullanılan saç ve sakal bakım ürünleri</p>
+        </div>
+
+        <div class="products-grid">
+          
+          <!-- Hair Wax -->
+          <div class="product-item">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=500&q=80" 
+                alt="Saç Vaksı ve Pomad" 
+                class="product-thumb"
+                loading="lazy"
+              >
+            </div>
+            <div class="product-content">
+              <h3 class="product-name">Şekillendirici Saç Vaksı</h3>
+              <p class="product-info">Doğal mat görünüm sağlar. Günlük kullanıma uygundur, yıkandığında kolayca çıkar. (100 ml)</p>
+              <div class="product-price">220 TL</div>
+            </div>
+          </div>
+
+          <!-- Beard Oil -->
+          <div class="product-item">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1608248597359-00914e6bdf25?auto=format&fit=crop&w=500&q=80" 
+                alt="Sakal Bakım Yağı" 
+                class="product-thumb"
+                loading="lazy"
+              >
+            </div>
+            <div class="product-content">
+              <h3 class="product-name">Sakal Bakım Yağı</h3>
+              <p class="product-info">Sakal tellerini yumuşatır, kaşıntıyı azaltır ve cildin kurumasını önler. (50 ml)</p>
+              <div class="product-price">200 TL</div>
+            </div>
+          </div>
+
+          <!-- Shampoo -->
+          <div class="product-item">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80" 
+                alt="Günlük Bakım Şampuanı" 
+                class="product-thumb"
+                loading="lazy"
+              >
+            </div>
+            <div class="product-content">
+              <h3 class="product-name">Günlük Bakım Şampuanı</h3>
+              <p class="product-info">Saç derisini arındırır, ferahlatır ve saçın doğal dengesini korur. (300 ml)</p>
+              <div class="product-price">180 TL</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CONTACT & LOCATION SECTION -->
+    <section class="section-block" id="iletisim">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Konum &amp; İletişim</h2>
+          <p class="section-subtitle">Çalışma saatlerimiz, açık adresimiz ve doğrudan iletişim hattımız</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <div class="info-card">
+            <!-- Working Hours -->
+            <div class="info-group">
+              <h3 class="info-title">Çalışma Saatleri</h3>
+              <ul class="hours-list">
+                <li>
+                  <span class="day">Pazartesi — Cumartesi</span>
+                  <span class="time">09:00 — 20:00</span>
+                </li>
+                <li>
+                  <span class="day">Pazar</span>
+                  <span class="time closed">Kapalı</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Address -->
+            <div class="info-group">
+              <h3 class="info-title">Adres</h3>
+              <address class="address-text">
+                Maslak Mahallesi, Taşyoncası Sokak No: 8/A<br>
+                Sarıyer, İstanbul
+              </address>
+              <p class="address-hint">Maslak metro istasyonuna 5 dakika yürüme mesafesindedir.</p>
+            </div>
+
+            <!-- Direct Phone & WhatsApp with +90 552 669 95 97 -->
+            <div class="info-group">
+              <h3 class="info-title">İletişim Hattı</h3>
+              <div class="contact-actions">
+                <a href="tel:+905526699597" class="btn btn-outline">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>Telefon: +90 552 669 95 97</span>
+                </a>
+                
+                <a 
+                  href="https://wa.me/905526699597?text=Merhaba%20Emin%20Berber,%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn btn-whatsapp"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.8 14.15c-.24.68-1.4 1.34-1.92 1.38-.49.05-1.12.08-3.64-.96-3.23-1.33-5.32-4.63-5.48-4.85-.16-.22-1.3-1.74-1.3-3.32 0-1.58.83-2.36 1.12-2.68.29-.32.64-.4.85-.4.21 0 .43 0 .61.01.2.01.46-.07.72.55.26.63.89 2.18.97 2.34.08.16.13.35.03.56-.11.21-.16.34-.32.53-.16.19-.34.42-.48.56-.16.16-.33.34-.14.66.19.32.84 1.38 1.8 2.24 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.14.7-.08.19-.22.82-.96 1.04-1.28.22-.32.44-.27.74-.16.3.11 1.91.9 2.24 1.06.33.16.55.24.63.38.08.13.08.79-.16 1.47z"/>
+                  </svg>
+                  <span>Doğrudan WhatsApp ile Yazın</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map placeholder -->
+          <div class="map-box">
+            <div class="map-placeholder">
+              <div class="map-marker">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#1f2937" stroke="#ffffff" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3" fill="#ffffff"></circle>
+                </svg>
+              </div>
+              <span class="map-text">Emin Berber — Maslak</span>
+              <span class="map-subtext">Maslak Mah. Taşyoncası Sokak No: 8/A Sarıyer</span>
+            </div>
+            <div class="map-link-row">
+              <a 
+                href="https://maps.google.com/?q=Maslak+Istanbul" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="link-map"
+              >
+                Google Haritalar'da Aç &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONFIRMATION RECEIPT MODAL -->
+  <div id="booking-confirm-modal" class="flow-modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-confirm-title">
+    <div class="flow-modal-content">
+      <div class="flow-modal-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h3 class="flow-modal-title" id="modal-confirm-title">Randevunuz Onaylandı</h3>
+      <p class="flow-modal-desc">Seçtiğiniz saat dilimi adınıza kapatılmıştır.</p>
+
+      <div class="receipt-card" id="modal-receipt">
+        <!-- Populated by JS -->
+      </div>
+
+      <div class="modal-btn-stack">
+        <button type="button" class="btn btn-primary btn-block" id="modal-close-btn">Anladım, Kapat</button>
+        <button type="button" class="btn btn-secondary btn-block" id="modal-ics-btn">Takvime Ekle (.ics)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <strong>Emin Berber</strong>
+        <p>Erkek Kuaförü &bull; İletişim: +90 552 669 95 97</p>
+      </div>
+      <div class="footer-right">
+        <p>&copy; 2026 Emin Berber. Tüm hakları saklıdır.</p>
+        <a href="randevu.html" target="_blank" rel="noopener noreferrer" class="footer-link">Özel Randevu Sayfası &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="barbershop.js"></script>
+  <script src="booking-flow.js"></script>
+</body>
+</html>
